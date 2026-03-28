@@ -1,66 +1,204 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 Full Stack Laravel Application with PhonePe Payment Gateway
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A fully functional, production-ready full-stack web application built using **Laravel**, designed with scalability, security, and performance in mind. This project integrates a secure **PhonePe payment gateway**, modern interactive UI using **Livewire**, and a robust authentication system with separate guards for users and admins.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 📌 Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### 🔐 Authentication & Authorization
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* Separate authentication guards for:
 
-## Learning Laravel
+  * **Users**
+  * **Admins**
+* Secure login & registration system
+* Role-based access control
+* Protected routes and middleware implementation
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### 💳 Payment Integration
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+* Integrated **PhonePe Payment Gateway**
+* Secure transaction handling
+* Server-side validation of payment responses
+* Safe API handling and encryption practices
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### ⚡ Interactive UI (Livewire)
 
-## Laravel Sponsors
+* Dynamic, reactive components without full page reloads
+* SPA-like experience using **Laravel Livewire**
+* Clean and maintainable component-based structure
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 🛠️ Admin Panel
 
-### Premium Partners
+* Dedicated admin dashboard
+* Manage users, transactions, and system data
+* Secure admin routes with separate guard
+* Data control with CRUD operations
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+### 📧 Mailing System
 
-## Contributing
+* Email notifications (e.g., registration, transactions)
+* Configurable mail drivers (SMTP, Mailgun, etc.)
+* Queue support (optional)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 🗄️ Database
 
-## Code of Conduct
+* MySQL database integration
+* Structured schema with migrations and seeders
+* Optimized queries and relationships
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## 🧑‍💻 Tech Stack
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+| Technology    | Description                                           |
+| ------------- | ----------------------------------------------------- |
+| Laravel       | Backend framework                                     |
+| PHP           | Core programming language                             |
+| Livewire      | Interactive frontend (like React, but Laravel-native) |
+| MySQL         | Database                                              |
+| JavaScript    | Frontend enhancements                                 |
+| PhonePe API   | Payment gateway                                       |
+| Mail Services | Email handling                                        |
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🔒 Security Practices
+
+* CSRF protection enabled
+* Input validation & sanitization
+* Secure API integration for payment gateway
+* Environment-based configuration (`.env`)
+* Password hashing using Laravel’s built-in mechanisms
+* Proper guard separation for admin and user roles
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1️⃣ Clone the Repository
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+composer install
+npm install && npm run dev
+```
+
+### 3️⃣ Configure Environment
+
+```bash
+cp .env.example .env
+php artisan key:generate
+```
+
+Update `.env` with:
+
+* Database credentials
+* Mail configuration
+* PhonePe API credentials
+
+### 4️⃣ Run Migrations
+
+```bash
+php artisan migrate --seed
+```
+
+### 5️⃣ Start the Server
+
+```bash
+php artisan serve
+```
+
+---
+
+## 📁 Project Structure Highlights
+
+```
+app/
+ ├── Http/
+ │   ├── Controllers/
+ │   ├── Livewire/
+ │   └── Middleware/
+ ├── Models/
+
+routes/
+ ├── web.php
+ ├── admin.php
+
+resources/
+ ├── views/
+ ├── livewire/
+
+database/
+ ├── migrations/
+ ├── seeders/
+```
+
+---
+
+## 🔄 Payment Flow (PhonePe)
+
+1. User initiates payment
+2. Request sent securely to PhonePe API
+3. Payment processed
+4. Callback/response handled on server
+5. Transaction verified and stored in database
+
+---
+
+## 👨‍💼 Admin Capabilities
+
+* Manage users
+* Monitor transactions
+* Access system analytics (optional extension)
+* Secure login via admin guard
+
+---
+
+## 🧪 Future Improvements
+
+* REST API support
+* Mobile app integration
+* Advanced analytics dashboard
+* Queue & job optimization
+* Multi-payment gateway support
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to fork the repository and submit a pull request.
+
+---
+
+## 📄 License
+
+This project is open-source and available under the **MIT License**.
+
+---
+
+## 🙌 Acknowledgements
+
+* Laravel Community
+* PhonePe Developer Docs
+* Livewire Documentation
+
+---
+
+## 📬 Contact
+
+For any queries or collaboration:
+
+* GitHub: omshrihari
+* Email: [your-email@example.com](mailto:omshrihari1912@gmail.com)
+
+---
+
+⭐ If you like this project, don't forget to give it a star!
