@@ -197,7 +197,7 @@ This project is open-source and available under the **MIT License**.
 For any queries or collaboration:
 
 * GitHub: omshrihari
-* Email: [your-email@example.com](mailto:omshrihari1912@gmail.com)
+* Email: [omshrihari1912@gmail.com](mailto:omshrihari1912@gmail.com)
 
 ---
 
